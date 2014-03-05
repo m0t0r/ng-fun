@@ -1,0 +1,88 @@
+html, body, div, span, object, iframe, h1, h2, .info__module--rule .rule__section__title, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    vertical-align: baseline;
+    background: transparent;
+}
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    vertical-align: baseline;
+    background: transparent;
+    list-style-type: none;
+    text-decoration: none;
+    -webkit-margin-start: 0;
+    -webkit-margin-end: 0;
+    -webkit-margin-before: 0;
+    -webkit-margin-after: 0;
+    -webkit-touch-callout: none;
+    -khtml-touch-callout: none;
+    -moz-touch-callout: none;
+    -ms-touch-callout: none;
+    -o-touch-callout: none;
+    touch-callout: none;
+    -webkit-user-drag: none;
+    -khtml-user-drag: none;
+    -moz-user-drag: none;
+    -ms-user-drag: none;
+    -o-user-drag: none;
+    user-drag: none;
+    -webkit-user-select: text;
+    -khtml-user-select: text;
+    -moz-user-select: text;
+    -ms-user-select: text;
+    -o-user-select: text;
+    user-select: text;
+}
+
+.app-loading {
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 998;
+    text-align: center;
+
+    background-color: #171717;
+
+}
+
+.app-loading:before {
+    content: '';
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+    margin-right: -0.25em;
+}
+
+
+.app-loading__animation {
+    width: 64px;
+    height: 64px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-image: url("../public/img/loader1.gif");
+
+}
+.app-loading__animation{
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+}
+
+#myVideo {
+    position: fixed; right: 0; bottom: 0;
+    min-width: 100%; min-height: 100%;
+    width: auto; height: auto; z-index: -100;
+    background-size: cover;
+}

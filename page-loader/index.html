@@ -1,0 +1,38 @@
+<!doctype html>
+<html >
+<head>
+    <title>Loading page...</title>
+    <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body ng-app="loadApp">
+        <div ng-hide="isLoading">
+            <video id="myVideo" loop>
+                <source src="video/video.webm" type="video/webm"/>
+                <p>Your browser does not support native video. Update your browser and be happy! ;)</p>
+
+            </video>
+        </div>
+</div>
+
+<div ng-class="loadingClass">
+    <div ng-class="animation"></div>
+</div>
+
+<script src="public/vendor/angular/angular.js"></script>
+<script>
+    angular.module('loadApp', [])
+            .run(function($rootScope, $timeout) {
+                $rootScope.isLoading = true;
+                $rootScope.loadingClass = 'app-loading';
+                $rootScope.animation = 'app-loading__animation';
+                $timeout(function() {
+                    $rootScope.isLoading = false;
+                    $rootScope.loadingClass = '';
+                    $rootScope.animation = '';
+                    document.getElementsByTagName("video")[0].play();
+                }, 3000);
+            });
+</script>
+
+</body>
+</html>

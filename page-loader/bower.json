@@ -1,0 +1,20 @@
+{
+  "name": "page-loader",
+  "version": "0.0.0",
+  "authors": [
+    "Vitaly <motor.kodlife@gmail.com>"
+  ],
+  "description": "Angular page loading progress animation",
+  "main": "index.html",
+  "keywords": [
+    "angularjs",
+    "loading",
+    "page",
+    "animation"
+  ],
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "angular": "~1.2.15"
+  }
+}

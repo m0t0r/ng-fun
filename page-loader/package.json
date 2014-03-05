@@ -1,0 +1,17 @@
+{
+  "name": "page-loader",
+  "version": "0.0.0",
+  "description": "Angular page loading progress animation",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "angular",
+    "page",
+    "loading",
+    "animation"
+  ],
+  "author": "Vitaly",
+  "license": "MIT"
+}
