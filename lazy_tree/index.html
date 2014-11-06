@@ -3,8 +3,44 @@
 <head lang="en">
     <meta charset="UTF-8">
     <title>A lazy tree</title>
+    <link rel="stylesheet" href="vendor/bootstrap/dist/css/bootstrap.css"/>
+    <link rel="stylesheet" href="vendor/angular-ui-tree/dist/angular-ui-tree.min.css"/>
 </head>
-<body>
+<body ng-app="lazyTree">
+    <div class="container" ng-controller="TreeCtrl">
+        <div class="jumbotron">
+            <h2>A simple example of a lazy loading tree using ui-tree</h3>
+            <p class="text-right">v. 0.0.1</p>
+        </div>
+        <div ui-tree data-drag-enabled="false">
+            <ol ui-tree-nodes data-collapsed ng-model="companies">
+                <li ui-tree-node  ng-repeat="company in companies">
+                    <div ui-tree-node ng-class="{'no-children': !companies.length}" >
+                        <button class="btn btn-lg btn-link disclosure-btn" ng-click="toggle(this); loadNames(collapsed)">
+                            <span class="caret" ng-class="{open: !collapsed}"></span>
+                        </button> {{ company.company }}
+                        <ol ui-tree-nodes ng-model="names" ng-class="{hidden: collapsed}">
+                            <li ui-tree-node ng-repeat="name in names">
+                                <button class="btn btn-lg btn-link disclosure-btn" ng-click="toggle(this); loadEmails(collapsed)">
+                                    <span class="caret" ng-class="{open: !collapsed}"></span>
+                                </button> {{ name.fullname }}
+                                <ol ui-tree-nodes ng-model="emails" ng-class="{hidden: collapsed}">
+                                    <li ui-tree-node ng-repeat="email in emails">
+                                        {{ email.email }}
+                                    </li>
+                                </ol>
+                            </li>
+                        </ol>
+                    </div>
+                </li>
+            </ol>
+        </div>
+    </div>
 
+<script src="vendor/jquery/dist/jquery.js"></script>
+<script src="vendor/angular/angular.js"></script>
+<script src="vendor/bootstrap/dist/js/bootstrap.js"></script>
+<script src="vendor/angular-ui-tree/dist/angular-ui-tree.js"></script>
+<script src="src/app.js"></script>
 </body>
 </html>
