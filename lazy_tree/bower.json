@@ -1,0 +1,18 @@
+{
+  "name": "lazy_tree",
+  "version": "0.0.1",
+  "homepage": "https://github.com/m0t0r/ng-fun",
+  "authors": [
+    "Vitaly <motor.kodlife@gmail.com>"
+  ],
+  "description": "A lazy tree",
+  "moduleType": [
+    "amd"
+  ],
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "angular": "~1.3.1",
+    "angular-ui-tree": "~2.1.5"
+  }
+}
